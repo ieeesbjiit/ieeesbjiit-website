@@ -6,38 +6,15 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className='flex flex-col justify-center items-center space-y-3'>
+      <img src={logo} height={400} width={400} />
+      <h2 className='text-2xl'>Vite + React</h2>
+      <p className='text-lg text-white'>Count is: <strong className='text-secondary'>{count}</strong></p>
+      <div className='flex items-center justify-center space-x-4'>
+      <button className='btn btn-success' onClick={() => setCount(ctr => ctr+1)}>Count +</button>
+      <button className='btn btn-error' onClick={() => setCount(ctr => ctr-1)}>Count -</button>
+      <button className='btn btn-secondary' onClick={() => setCount(0)}>Reset</button>
+      </div>
     </div>
   )
 }
