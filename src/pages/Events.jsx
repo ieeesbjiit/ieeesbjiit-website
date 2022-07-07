@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import NET from "vanta/dist/vanta.net.min";
 
-const Index = () => {
+const Events = () => {
   const [vantaEffect, setVantaEffect] = useState(0);
   const bgRef = useRef(null);
   useEffect(() => {
@@ -33,7 +33,7 @@ const Index = () => {
       ref={bgRef}
     >
       <header className="z-2">
-        <Header active="home" />
+        <Header active="events" />
       </header>
       <main></main>
       <footer className="absolute w-full z-2 bg-white bottom-0">
@@ -43,4 +43,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Events;
